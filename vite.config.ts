@@ -4,11 +4,10 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: '/data-navigator-magic/',
+  base: mode === 'production' ? '/data-navigator-magic/' : '/',
   server: {
     host: "::",
     port: 8080,
-    base: '/data-navigator-magic/',
   },
   plugins: [
     react(),
